@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Manager Assistant - Chat Interface</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/30 backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">Team Manager</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                    <a href="index.html#features" class="hover:text-blue-400 transition">Features</a>
+                    <a href="index.html#about" class="hover:text-blue-400 transition">About</a>
+                    <a href="index.html#testimonials" class="hover:text-blue-400 transition">Testimonials</a>
+                    <a href="index.html#contact" class="hover:text-blue-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chat Interface -->
+    <div class="container mx-auto px-4 pt-24 pb-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Chat Header -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-t-xl p-6 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">Team Manager Assistant</h1>
+                    <p class="text-gray-400">Your AI-powered productivity companion</p>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatbot-messages" class="bg-white/5 backdrop-blur-lg h-[60vh] overflow-y-auto p-6 space-y-4">
+                <!-- Initial welcome message -->
+                <div class="chatbot-message bot-message">
+                    Hello! I'm your Team Manager Assistant. I can help you with:
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Task management and organization</li>
+                        <li>Team collaboration tips</li>
+                        <li>Productivity strategies</li>
+                        <li>Platform features and usage</li>
+                    </ul>
+                    How can I assist you today?
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-b-xl p-4">
+                <div class="flex gap-4">
+                    <input type="text" id="user-input" 
+                           class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                           placeholder="Type your message here...">
+                    <button id="send-message" 
+                            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot JavaScript -->
+    <script src="chatbot.js"></script>
+</body>
+</html> 
